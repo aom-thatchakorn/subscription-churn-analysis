@@ -40,7 +40,7 @@ Exposure is the revenue linked to at-risk segments, not a forecast of loss: most
 
 ## Scenario analysis
 Expected churners = customers in segment × segment churn rate. 
-Revenue saved = expected churners × churn reduction × $10 (Basic plan cost).
+Revenue saved = expected churners × churn reduction × $10 (Basic plan price).
 
 | Tier | Segment | Customers | Churn rate | Reduction | Revenue saved / month |
 |---|---|---|---|---|---|
@@ -51,10 +51,10 @@ Revenue saved = expected churners × churn reduction × $10 (Basic plan cost).
 | | | | | 20% | $26 |
 | | | | | 30% | $38 |
 
-Assumptions: reduction is relative to the segment's current churn rate from 15.24% → 13.75% for a 30% reduction); churn rates are calculated on all customers in the segment (active and churned); tier 2 is a subset of tier 1, so the two tiers are not added together; intervention costs are not deducted.
+Assumptions: Assumptions: the reduction is relative to the segment's current churn rate (e.g. for Tier 1, a 30% reduction takes churn from 19.15% to about 13.4%). Churn rates are calculated on all customers in the segment (active and churned) and applied to the currently active customers. Tier 2 is a subset of Tier 1, so the two tiers are not added together. Revenue per customer is $10/month (Basic plan price). Intervention costs are not deducted.
 
 ## Recommendations
-1. **Strengthen 90-day onboarding.** New customers churn 24.64% more than established ones (20.0% vs 14.8%). Add an onboarding email series, in-app tutorial and check-ins at day 30/60/90.
+1. **Strengthen 90-day onboarding.** New customers churn 35% more than established ones (20.0% vs 14.8%). Add an onboarding email series, in-app tutorial and check-ins at day 30/60/90.
 2. **Incentivize annual billing.** Monthly churn is ~1.7x annual, the strongest driver found. Test a 10–15% annual-commitment discount, starting with Basic-tier customers.
 3. **Two-tier retention.** Run a broad campaign (email, in-app offers) for the 650 Basic + Monthly customers, and personal outreach for the 52 who also have New tenure.
 
@@ -65,3 +65,4 @@ Assumptions: reduction is relative to the segment's current churn rate from 15.2
 - **Variables tested one at a time:** the combined effect of the three risk factors (tier 2) was not tested directly
 - **Exposure is an upper bound,** and scenarios do not deduct the cost of retention actions such as discounts
 - Small segment (52 customers): churn rate is unstable
+- **Churn rate as a monthly rate:** the observed churn share is treated as the expected churn over one month; the true monthly rate may be lower.
