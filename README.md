@@ -12,7 +12,7 @@ Which customer segments carry the highest churn risk, how much revenue is expose
 - Variables: plan duration, subscription type, tenure, country, age, gender, device (7 variables)
 
 ## Method
-1. **SQL:** defined churn as no payment within 30 days of the dataset's snapshot date; created a tenure segment (New <90 days vs Established) with CASE WHEN; calculated revenue impact
+1. **SQL:** defined churn as no payment within 30 days of the dataset's snapshot date; created a tenure segment (New <=90 days vs Established) with CASE WHEN; calculated revenue impact
 2. **Excel:** ran chi-square tests of independence (α = 0.05) on 7 variables using contingency tables
 3. **Excel:** for the significant variables, used SUMIF/SUMIFS, XLOOKUP and PivotTables to size revenue exposure and run retention scenarios
 4. **Power BI:** built a dashboard (DAX measures, KPI cards, segment breakdowns); cross-checked key figures against SQL and Excel
@@ -22,7 +22,7 @@ Which customer segments carry the highest churn risk, how much revenue is expose
 |---|---|---|---|
 | Plan duration | Monthly 17.3% vs Annual 10.1% | 0.000007 | Significant |
 | Subscription type | Basic 17.6% vs Premium 12.7% | 0.0109 | Significant |
-| Tenure segment | New (<90 days) 20.0% vs Established 14.8% | 0.035 | Significant |
+| Tenure segment | New (<=90 days) 20.0% vs Established 14.8% | 0.035 | Significant |
 | Country / Age / Gender / Device | No meaningful variation | > 0.36 (all) | Not significant |
 
 Overall churn rate: 15.24%.
@@ -47,7 +47,7 @@ Revenue saved = expected churners × churn reduction × $10 (Basic plan price).
 | 1 | Basic + Monthly | 650 | 19.15% | 10% | $125 |
 | | | | | 20% | $249 |
 | | | | | 30% | $374 |
-| 2 | Basic + Monthly + New (<90 days) | 52 | 24.64% | 10% | $13 |
+| 2 | Basic + Monthly + New (<=90 days) | 52 | 24.64% | 10% | $13 |
 | | | | | 20% | $26 |
 | | | | | 30% | $38 |
 
